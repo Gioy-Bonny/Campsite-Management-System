@@ -22,7 +22,7 @@ public class Booking {
      */
     private final int bookingId;
     private final String campsiteName;
-    private final String areaId;
+    private  String areaId;
     private final int guestId;
     private final LocalDate startDate;
     private final LocalDate endDate;
@@ -86,6 +86,11 @@ public class Booking {
 
     public void setAssignedPlot(Plot assignedPlot) {
         this.assignedPlot = assignedPlot;
+    }
+
+    /** Changes the camping area, used when a booking is moved to a plot in another area. */
+    public void setAreaId(String areaId) {
+        this.areaId = areaId;
     }
 
     @Override

@@ -4,12 +4,12 @@ module campsite.management {
 
     // JavaFX needs to launch your Application class
     exports campsite;
-    //exports campsite.ui;
+    exports campsite.ui;
 
     // The other layers, so tests and other code can see them
     exports campsite.structures;
     exports campsite.model;
-    //exports campsite.service;
+    exports campsite.service;
 
     // Only needed if you use TableView with PropertyValueFactory later:
     // JavaFX reads your model getters by reflection
