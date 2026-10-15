@@ -17,7 +17,7 @@ public class MainApp extends Application {
         AppContext ctx = new AppContext();
 
         TabPane tabs = new TabPane();
-        tabs.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
+        tabs.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE); //stops the user from closing any of the tabs
         tabs.getTabs().add(makeTab("Drill-down", new DrillDownTab(ctx)));
         tabs.getTabs().add(makeTab("Add data", new AddDataTab(ctx)));
         tabs.getTabs().add(makeTab("Bookings", new BookingTab(ctx)));
@@ -33,7 +33,7 @@ public class MainApp extends Application {
         });
 
         stage.setTitle("Campsite Management System");
-        stage.setScene(new Scene(tabs, 1050, 720));
+        stage.setScene(new Scene(tabs, 720, 720));
         stage.show();
     }
 
